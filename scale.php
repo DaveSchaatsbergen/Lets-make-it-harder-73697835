@@ -13,11 +13,9 @@ function arrayCheck($Array, $arr_size, $sum)
     while ($l < $r) { 
         if ($Array[$l] + $Array[$r] == $sum) {
             return 1;  
-        }
-        else if ($Array[$l] + $Array[$r] < $sum) {
+        } else if ($Array[$l] + $Array[$r] < $sum) {
             $l++; 
-        }
-        else {
+        } else {
             $r--; 
         }
     }  
@@ -31,8 +29,7 @@ $arr_size = sizeof($Array);
 // roep de functie op
 if (arrayCheck($Array, $arr_size, $n)) {
     echo "In balans"; 
-}
-else {
+} else {
     echo "Niet in balans"; 
 }
 ?> 
