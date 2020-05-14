@@ -10,14 +10,16 @@ function arrayCheck($Array, $arr_size, $sum)
     /*check voor de 2 waardes in de array*/
     $l = 0; 
     $r = $arr_size - 1;  
-    while ($l < $r) 
-    { 
-        if($Array[$l] + $Array[$r] == $sum) 
+    while ($l < $r) { 
+        if ($Array[$l] + $Array[$r] == $sum) {
             return 1;  
-        else if($Array[$l] + $Array[$r] < $sum) 
+        }
+        else if ($Array[$l] + $Array[$r] < $sum) {
             $l++; 
-        else 
+        }
+        else {
             $r--; 
+        }
     }  
     return 0; 
 } 
@@ -27,8 +29,10 @@ $n = 16;
 $arr_size = sizeof($Array); 
   
 // roep de functie op
-if(arrayCheck($Array, $arr_size, $n)) 
+if (arrayCheck($Array, $arr_size, $n)) {
     echo "In balans"; 
-else
+}
+else {
     echo "Niet in balans"; 
+}
 ?> 
